@@ -1,0 +1,39 @@
+`timescale 1ns / 1ps
+
+
+module test;
+
+	
+	reg a;
+	reg b;
+	reg c;
+	reg d;
+
+
+	wire [3:0] wxyz;
+
+
+	bcd_ex3 uut (
+		.a(a), 
+		.b(b), 
+		.c(c), 
+		.d(d), 
+		.wxyz(wxyz)
+	);
+
+	initial begin
+		{a,b,c,d} = 4'b0000;
+		#100;
+		{a,b,c,d} = 4'b0001;
+		#100;
+		{a,b,c,d} = 4'b0010;
+		#100;
+		{a,b,c,d} = 4'b0011;
+		#100;
+		
+  
+
+	end
+      
+endmodule
+
