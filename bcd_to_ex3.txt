@@ -1,8 +1,8 @@
-module bcd_ex3_Dataflow(input a, input b,input c,input d,output w,output x,output y,output z);
+module bcd_ex3(input a,b,c, d,output [3:0]wxyz);
 
-assign w = (a | b&(c|d));
-assign x = (b^(c|d));
-assign y = (~(c^d));
-assign z = ~d;
+assign wxyz[3] = (a | b&(c|d));
+assign wxyz[2]= (b^(c|d));
+assign wxyz[1] = (~(c^d));
+assign wxyz[0] = ~d;
 
 endmodule
