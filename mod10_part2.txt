@@ -24,8 +24,10 @@ module test;
 		#20 clk = ~clk;
 		
 	end
-	initial 
-	#800 $finish;
+	
+	
+	//initial 
+	//#800 $finish;
 	
       
 endmodule
